@@ -28,11 +28,11 @@
 # mount point	fstype		device			[device2]
 
 /sdcard         vfat            /dev/block/mmcblk1p1    /dev/block/mmcblk1
-/system         ext4            system
-/cache          ext4            cache
-/data           ext4            userdata
-/misc           mtd             misc
-/boot           mtd             boot
-/recovery       mtd             recovery
-/pds            ext4            pds
-/modem          ext4		modem
+/system         ext4            /dev/block/platform/msm_sdcc.1/by-name/system
+/cache          ext4            /dev/block/platform/msm_sdcc.1/by-name/cache
+/data           ext4            /dev/block/platform/msm_sdcc.1/by-name/userdata
+/misc           mtd             /dev/block/platform/msm_sdcc.1/by-name/misc
+/boot           mtd             /dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery       mtd             /dev/block/platform/msm_sdcc.1/by-name/recovery
+/pds            ext4            /dev/block/platform/msm_sdcc.1/by-name/pds
+/modem          ext4		/dev/block/platform/msm_sdcc.1/by-name/modem
