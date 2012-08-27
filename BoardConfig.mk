@@ -8,7 +8,7 @@ TARGET_BOARD_PLATFORM := unknown
 TARGET_CPU_ABI := armeabi
 TARGET_BOOTLOADER_BOARD_NAME := xt897
 
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE := console=/dev/null androidboot.hardware=qcom user_debug=31 loglevel=1 msm_rtb.filter=0x3F kgsl.mmutype=gpummu
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 
