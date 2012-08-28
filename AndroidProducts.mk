@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_xt897.mk
+    $(LOCAL_DIR)/device_asanti.mk

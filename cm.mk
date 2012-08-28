@@ -1,18 +1,20 @@
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
-
 # Release name
-PRODUCT_RELEASE_NAME := xt897
+PRODUCT_RELEASE_NAME := asanti
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/cdma.mk)
+
+# Enhanced NFC
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/moto/xt897/device_xt897.mk)
+$(call inherit-product, device/moto/asanti/device_asanti.mk)
+
+TARGET_BOOTANIMATION_NAME := vertical-540x960
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := xt897
-PRODUCT_NAME := cm_xt897
+PRODUCT_DEVICE := asanti
+PRODUCT_NAME := cm_asanti
 PRODUCT_BRAND := moto
-PRODUCT_MODEL := xt897
+PRODUCT_MODEL := asanti
 PRODUCT_MANUFACTURER := moto
