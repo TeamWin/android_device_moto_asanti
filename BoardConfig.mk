@@ -34,7 +34,6 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
-ARCH_ARM_HAVE_NEON := true
 TARGET_BOOTLOADER_BOARD_NAME := asanti
 
 # Enable WEBGL in WebKit
@@ -43,7 +42,7 @@ ENABLE_WEBGL := true
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE  
+COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE 
 
 BOARD_KERNEL_CMDLINE        := console=/dev/null androidboot.hardware=qcom user_debug=31 loglevel=1 msm_rtb.filter=0x3F kgsl.mmutype=gpummu
 BOARD_KERNEL_BASE           := 0x80200000
@@ -77,7 +76,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_PREBUILT_KERNEL := device/moto/asanti/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
+BOARD_HAS_LARGE_FILESYSTEM := true
 
 #TWRP
 DEVICE_RESOLUTION := 540x960
-
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#this enables event logging, TURN IT OFF before a release
+TWRP_EVENT_LOGGING := true
