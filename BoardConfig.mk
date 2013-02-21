@@ -89,3 +89,6 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_INITRC := device/moto/asanti/recovery.rc 
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TW_BRIGHTNESS_PATH := /sys/devices/i2c-10/10-0038/backlight/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
