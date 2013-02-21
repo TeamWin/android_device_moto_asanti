@@ -88,3 +88,4 @@ TW_EXTERNAL_STORAGE_PATH := "/external_sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_INITRC := device/moto/asanti/recovery.rc 
